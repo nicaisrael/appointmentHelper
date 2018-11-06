@@ -1,0 +1,8 @@
+
+<select type="text" class="custom-select" [(ngModel)]="userId" (ngModelChange)="saveUser()" placeholder="Select a User" > 
+	<option value="0"  selected>-- All Appointments --</option>
+	<option *ngFor="let user of users" [(ngValue)]="user.Id" >{{user.Name}}</option>
+</select>
+<button class="btn btn-secondary" id = "newButton" (click)="toggleForm()">New Appointment</button>
+
+
